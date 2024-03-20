@@ -1,10 +1,10 @@
 package entity
 
-func NewApiDolarCotation() *apiDolarCotation {
-	return &apiDolarCotation{}
+func NewApiDolarQuotation() *apiDolarQuotation {
+	return &apiDolarQuotation{}
 }
 
-type apiDolarCotation struct {
+type apiDolarQuotation struct {
 	Usdbrl struct {
 		Code       string `json:"code"`
 		Codein     string `json:"codein"`
@@ -20,10 +20,10 @@ type apiDolarCotation struct {
 	} `json:"USDBRL"`
 }
 
-func (e *apiDolarCotation) GetUrl() string {
+func (e *apiDolarQuotation) GetUrl() string {
 	return "https://economia.awesomeapi.com.br/json/last/USD-BRL"
 }
 
-func (e *apiDolarCotation) GetBid() string {
+func (e *apiDolarQuotation) GetBid() string {
 	return e.Usdbrl.Bid
 }

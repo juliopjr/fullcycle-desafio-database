@@ -4,6 +4,6 @@ import (
 	"github.com/juliopjr/fullcycle-desafio-database/server/entity"
 )
 
-type CotationInterface interface {
-	Create(*entity.Cotation) error
+type QuotationInterface interface {
+	Create(*entity.Quotation) error
 }

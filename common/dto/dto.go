@@ -1,5 +1,5 @@
 package dto
 
-type Cotation struct {
+type Quotation struct {
 	Bid string `json:"bid"`
 }

@@ -9,15 +9,15 @@ import (
 	"gorm.io/gorm"
 )
 
-func NewCotationDB(db *gorm.DB) *cotation {
-	return &cotation{db}
+func NewQuotationDB(db *gorm.DB) *quotation {
+	return &quotation{db}
 }
 
-type cotation struct {
+type quotation struct {
 	db *gorm.DB
 }
 
-func (e *cotation) Create(cotatiton *entity.Cotation) error {
+func (e *quotation) Create(cotatiton *entity.Quotation) error {
 	ctxDB, cancelCtxDB := context.WithTimeout(context.Background(), 10*time.Millisecond)
 	defer cancelCtxDB()
 	chDB := make(chan error)
